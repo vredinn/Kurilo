@@ -29,7 +29,7 @@
         }
     }
     .advantages{
-        padding-top: 50px;
+        padding: 50px 0;
         &__item{
             margin-top: 45px;
         }
@@ -41,6 +41,20 @@
         }
         &__list{
             padding: 0;
+        }
+    }
+    .consultation{
+        min-height: 0;
+        padding: 50px 0;
+        .title{
+            text-align: center;
+        }
+        &__descr{
+            text-align: center;
+        }
+        .feed-form{
+            margin: 0 auto;
+            margin-top: 36px;
         }
     }
 }
@@ -58,18 +72,12 @@
         &__phone {
             font-size: 16px;
         }
-    }
-    .button {
-        width: 130px;
-        height: 25px;
-        font-size: 11px;
-        &_main {
-            margin-top: 40px;
-            width: 250px;
-            height: 40px;
-            font-size: 14px;
+        .button{
+            width: 130px;
+            height: 25px;
+            font-size: 11px;
         }
-    }
+    }    
     .promo{        
         padding-bottom: 30px;
         &__wrapper {
@@ -97,10 +105,17 @@
                 margin: 0 auto;
                 margin-bottom: 20px; 
             }
-        }        
+        }    
+        .button_main {
+                margin-top: 40px;
+                width: 250px;
+                height: 40px;
+                font-size: 14px;
+        }
+            
     }
     .advantages{
-        padding-top: 30px;
+        padding: 30px 0;
         &__item{
             margin-top: 25px;
         }
@@ -111,23 +126,28 @@
             margin-top: 5px;
         }
     }
+    .consultation{
+        padding: 30px 0;
+        .feed-form{
+            margin: 0 auto;
+            margin-top: 26px;
+        }
+    }
 }
 @media (max-width: 575px){
     .header{
-        flex-wrap: wrap;
+        flex-direction: column;
         &__logo {
             width: 250px;
         }
         &__official {
-            margin-top: 17px;
-            font-size: 10px;
-            span {
-                font-size: 16px;
-            }
+            display: none;
         }
         &__phone {
-            margin-top: 10px;
-            font-size: 12px;
+            display: none;
+        }
+        .button{
+            display: none;
         }
     }
     .promo{
@@ -137,7 +157,8 @@
         }
         &__header{
            font-size: 25px;
-           margin: 0; 
+           margin: 10px 0 0 0; 
+           text-align: center;
         }
         &__subheader{
             font-size: 16px;
@@ -155,12 +176,28 @@
         }    
     }
     .advantages{
-        padding-top: 20px;
+        padding: 20px 0;
+        .title{
+            font-size: 25px;
+        }
         &__item{
             margin-top: 15px;
         }
         &__descr{
             margin-top: 5px;
+        }
+    }
+    .consultation{
+        padding: 20px 0;
+        .title{
+            font-size: 25px;
+        }
+        &__descr{
+            font-size: 14px;
+        }
+        .feed-form{
+            margin: 0 auto;
+            margin-top: 16px;
         }
     }
 }
