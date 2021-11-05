@@ -37,7 +37,33 @@
             $('.overlay, #order').fadeIn();
         });
     });
+    
+    function validateForms (form) {
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, введите свое имя",
+                phone: "Пожалуйста, введите номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен адресс почты"
+                }
+            }
+        });
+    };
 
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask('+7 (999) 999-99-99');
 })(jQuery);
 
 const slider = tns({
