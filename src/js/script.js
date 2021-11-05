@@ -1,20 +1,3 @@
-// $(document).ready(function(){
-//     $('.carousel__inner').slick({
-//         speed: 1200,
-//         prevArrow: '<button type="button" class="slick-prev"><img src="../icons/left.svg"></button>',
-//         nextArrow: '<button type="button" class="slick-next"><img src="../icons/right.svg"></button>',
-//         responsive: [
-//             {
-//                 breakpoint: 992,
-//                 settings: {
-//                     dots: true,
-//                     arrows: false
-//                 }
-//             }
-//         ]
-//       });
-//   });
-
 (function($) {
     $(function() {
       
@@ -37,6 +20,23 @@
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    // Modal
+
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn();
+    });
+
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut();
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn();
+        });
+    });
 
 })(jQuery);
 
