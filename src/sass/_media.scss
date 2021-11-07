@@ -109,6 +109,10 @@
         &__phone {
             font-size: 18px;
         }
+    }    
+    .pageup {
+        right: 20px;
+        bottom: 20px;
     }
 }
 @media (max-width: 767px){
@@ -362,5 +366,11 @@
         input {
             height: 35px;
         }
+    }
+    .pageup {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        padding-top: 5px;
     }
 }
